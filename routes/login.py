@@ -21,4 +21,4 @@ async def login_controller(credentials: HTTPBasicCredentials):
         raise HTTPException(status_code=401)
 
     token = generate_jwt_token(user_entity(user))
-    return {"access_token": token, "token_type": "bearer"}
+    return {"accessToken": token, "name": name}
